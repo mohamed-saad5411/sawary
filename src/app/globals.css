@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+.container{
+  @apply w-11/12 m-auto
+}
+.form-tailwind{
+  @apply block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6
+}
+.btn{
+  @apply rounded-md bg-[#bfa27a] px-3 py-2 text-lg font-semibold text-white shadow-xs hover:bg-[#99886e] cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600
+}
+/*
+main color
+dunkel --------> #1c1c1c
+zentrum -------> #5a4e4e
+hell ----------> #bfa27a
+ */
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,3 +39,8 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 } */
+
+/* ------------------ */
+:root{
+  scroll-behavior: smooth;
+}

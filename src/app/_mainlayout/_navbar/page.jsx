@@ -6,9 +6,11 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'main', href: '/', current: true },
-  { name: 'Team1', href: '/team1', current: false },
-  { name: 'Team2', href: '/team2', current: false },
-  { name: 'Team3', href: '/team3', current: false },
+  { name: 'units', href: '/units', current: false },
+  { name: 'projects', href: '/projects', current: false },
+  { name: 'developer', href: '/developer', current: false },
+  { name: 'updates', href: '/updates', current: false },
+  { name: 'contact', href: '/contact', current: false },
 ]
 
 function classNames(...classes) {
@@ -22,7 +24,7 @@ export default function Navbar() {
   return <>
 
 
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-[#1c1c1c]">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* Mobile menu button*/}
@@ -37,13 +39,15 @@ export default function Navbar() {
           {/* main menu*/}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
-              <img
-                alt="Your Company"
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
-              />
+              <Link href={'/'}>
+                <img
+                  alt="Your Company"
+                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                  className="h-8 w-auto"
+                />
+              </Link>
             </div>
-            <div className="hidden sm:ml-6 sm:block">
+            <div className="hidden  sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
                   <Link
@@ -80,28 +84,36 @@ export default function Navbar() {
                 className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
               >
                 <MenuItem>
-                  <a
-                    href="#"
+                  <Link
+                    href="/"
                     className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
                   >
                     Your Profile
-                  </a>
+                  </Link>
                 </MenuItem>
                 <MenuItem>
-                  <a
-                    href="#"
+                  <Link
+                    href="setting"
                     className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
                   >
                     Settings
-                  </a>
+                  </Link>
                 </MenuItem>
                 <MenuItem>
-                  <a
-                    href="#"
+                  <Link
+                    href="/"
                     className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
                   >
                     Sign out
-                  </a>
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link
+                    href="/login"
+                    className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
+                  >
+                    Sign in
+                  </Link>
                 </MenuItem>
               </MenuItems>
             </Menu>
