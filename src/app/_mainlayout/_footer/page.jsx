@@ -8,7 +8,7 @@ import Image from 'next/image'
 export default function page() {
 
   function totop() {
-    window.scrollTo({
+    window?.scrollTo({
       top: 0,
       left: 0,
       behavior: "smooth"
